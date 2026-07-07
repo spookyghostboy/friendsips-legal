@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FriendSips — Privacy Policy</title>
+  <meta name="description" content="Privacy policy for FriendSips (also known as Sips), a social drink-logging app.">
+  <style>
+    :root { --ink:#1c1e26; --muted:#5b6270; --accent:#7c5cff; --line:#e7e8ee; --bg:#fbfbfd; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 22px 72px; }
+    header { border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 26px; }
+    .brand { font-size: 15px; font-weight: 700; letter-spacing: .02em; color: var(--accent); }
+    h1 { font-size: 30px; line-height: 1.2; margin: 8px 0 6px; }
+    .dates { color: var(--muted); font-size: 14px; }
+    h2 { font-size: 20px; margin: 34px 0 8px; }
+    p, li { color: #24262f; }
+    strong { color: var(--ink); }
+    a { color: var(--accent); }
+    ul { padding-left: 20px; }
+    li { margin: 6px 0; }
+    .intro { font-size: 17px; color: #33363f; }
+    footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+    footer a { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">FriendSips</div>
+      <h1>Privacy Policy</h1>
+      <div class="dates">Effective July 7, 2026 · Last updated July 7, 2026</div>
+    </header>
+
+    <p class="intro">FriendSips (also known as Sips) (“the app,” “we”) is a small social drink‑logging app. This policy explains what the app collects, how it’s used, and the controls you have. The short version: we collect what’s needed to run a small social app, your posts and profile are visible to other users, exact map locations stay private to you, we never sell your data or show ads, and you can delete your account — and everything in it — yourself, in the app, at any time.</p>
+
+    <h2>What we collect</h2>
+    <p><strong>Account information.</strong> When you sign up we collect your email address, or — with Sign in with Apple — the identifier and email Apple provides (which may be Apple’s private relay address). You choose a username and an avatar character. Real names are not required, and FriendSips has no profile photos — avatars are illustrated characters.</p>
+    <p><strong>Age confirmation.</strong> FriendSips is for people of legal drinking age. We store the timestamp of your age confirmation as a record that you confirmed it.</p>
+    <p><strong>Your posts (check‑ins).</strong> When you log a drink, we store the drink, an optional serving size, an optional location, and the time of the post. Posts appear to people who follow you and in the public Discover feed.</p>
+    <p><strong>Social activity.</strong> We store the people you follow and who follow you, the “cheers” (reactions) you give and receive, and your progress toward in‑app quests and levels (calculated from your posts).</p>
+    <p><strong>Location — only what you choose, and exact spots stay private to you.</strong> Adding a location to a post is optional. If you add one, the place/venue name is stored and shown with your post. Separately and optionally, you can drop a map pin for that place; the exact coordinates are stored only for your own personal map — they are visible only to you, are stored so other users’ apps cannot read them, and never appear in anyone’s feed. Location permission is requested only if you use the pin feature, and it is off by default.</p>
+    <p><strong>Drink contributions.</strong> If you add a drink to the shared catalog (by manual entry or by confirming a scan), that entry — its name, producer, category, and any barcode — becomes part of the shared database available to all users. Catalog entries are not shown publicly as belonging to you.</p>
+    <p><strong>Reports and blocks.</strong> If you report content or block another user, we store that record to operate the safety features.</p>
+    <p><strong>Push notification token.</strong> If you enable notifications, we register a push token (Apple Push Notification service, delivered through Expo’s push service) so we can send you alerts about social activity — a new follower, a cheer on your post, or a friend’s new post. You can turn notifications off in the app or in iOS Settings; your token is removed when you sign out or turn notifications off.</p>
+
+    <h2>The camera, and what happens to scan photos</h2>
+    <p>FriendSips uses your camera (with your permission) to identify drinks two ways: reading barcodes, and photographing labels for AI identification. A label photo is sent securely to our server, which passes it to our AI provider, <strong>Anthropic</strong>, through its API solely to identify the drink and return the result to you. Anthropic processes the image to produce that result and <strong>does not use API inputs or outputs to train its models.</strong> <strong>We do not store the photo</strong> — it is used only for that one identification, is never attached to a post or your profile, and is never visible to other users. (Drink names you type are similarly checked once by the same AI provider for abuse, and are not stored for that purpose.)</p>
+
+    <h2>What other users can see</h2>
+    <p>Your profile (username, avatar, and post history), your posts as they appear in the Following and Discover feeds — including any location name you added, or none — your cheers, and your follower/following lists. People you block cannot see your profile or posts, and you cannot see theirs.</p>
+
+    <h2>What we never do</h2>
+    <p>We do not sell your information. We do not show ads or share your data with advertisers. We do not track you across other apps or websites. We do not store your precise location except the optional, owner‑only map pins described above. We do not store photos of you or your surroundings.</p>
+
+    <h2>Services we rely on</h2>
+    <p>FriendSips uses a small number of providers that process data on our behalf:</p>
+    <ul>
+      <li><strong>Supabase</strong> — database and authentication (account data, posts, and app data).</li>
+      <li><strong>Anthropic</strong> — processes label photos and typed drink names transiently to identify drinks / check names, as described above; does not train on this data.</li>
+      <li><strong>Expo</strong> — delivers push notifications to your device.</li>
+      <li><strong>Open Food Facts</strong> — queried by barcode number when a scanned barcode isn’t in our catalog; only the barcode number is sent.</li>
+      <li><strong>Apple</strong> — Sign in with Apple, Apple Push Notification service, and Apple Maps (for your personal venue map).</li>
+    </ul>
+    <p>These providers process data to provide their function to the app, not for their own advertising.</p>
+
+    <h2>Data retention and deletion</h2>
+    <p>You can delete your account at any time in the app (Profile → gear → Delete account). Deletion removes your account, profile, posts, cheers, follows, map pins, quest progress, blocks, and push tokens. Drinks you contributed to the shared catalog remain in the catalog, no longer associated with any account. Deleting an individual post removes it immediately.</p>
+
+    <h2>Children</h2>
+    <p>FriendSips is not for anyone under the legal drinking age in their region, and never for anyone under 18. We do not knowingly collect information from minors; any such account will be deleted.</p>
+
+    <h2>Security</h2>
+    <p>Data is sent over encrypted connections, access is restricted by per‑user security rules enforced at the database level, and secrets such as API keys are never included in the app itself.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes materially, we’ll update the date above and note it in the app or its release notes.</p>
+
+    <h2>Contact</h2>
+    <p>Questions, requests, or privacy concerns: <a href="mailto:sips.app.contact@gmail.com">sips.app.contact@gmail.com</a></p>
+
+    <footer>
+      FriendSips (also known as Sips) · <a href="support.html">Support</a> · <a href="mailto:sips.app.contact@gmail.com">sips.app.contact@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
